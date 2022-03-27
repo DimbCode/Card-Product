@@ -171,3 +171,9 @@ body {
         transform: rotate(90deg);
     }
 }
+@media screen and (max-width: 405px) {
+    .carusel-v2__important-img {
+    height: 220px;
+    width: 320px;
+    }
+}
