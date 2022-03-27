@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+.carusel-v2 {   
+    display: flex;
+    align-items: center;
+}
+.carusel-v2 .images-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    position:relative;
+}
+.images-list__arrow {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
+    position: absolute;
+    left: calc(50% - 15px);
+    top: 0;
+}
+.images-list__arrow {
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images-list__arrow {
+    cursor: pointer;
+    transition: .3s ease;
+}
+.images-list__arrow:hover {
+    background-color: #90c511;
+}
+.images-list__arrow:first-child {
+    position: absolute;
+    top: 5px;
+}
+.images-list__arrow:last-child {
+    position: absolute;
+    top: 80%;
+}
+.images-list__arrow:first-child:after {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-top: 0.3em solid;
+    color: #90c511;
+    border-right: 0.3em solid;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 5;
+  }
+  .images-list__arrow:last-child:after {
+    content: ' ';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-top: 0.3em solid;
+    color: #90c511;
+    border-right: 0.3em solid;
+    -moz-transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    z-index: 5;
+  }
+  .images-list__arrow:hover::after{
+    color: white;
+}
+.carusel-v2 .images-list-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    height: 350px;
+    max-height: 407px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 0px;
+}  
+.carusel-v2 .images-list-container::-webkit-scrollbar {
+   display: none;
+    
+  }
+.images-list-img {
+    width: 40px;
+    height: 40px;
+    margin: 13px 0;
+    background: url("https://c.dns-shop.ru/thumb/st4/fit/0/0/58e7f63a7ebb6fccc44cec2dd6fcb526/df012e460485b18a2b9d4cab568bd51a25a3db67fb23bb5172e6f4739b75db4e.jpg.webp") center no-repeat cover;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.images-list-img-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-left: 3px solid white;
+}
+.active {
+  border-left: 3px solid #90c511;
+  border-radius: 1px;
+}
+.carusel-v2__important-img {
+    height: 300px;
+    width: 400px;
+    background: url("https://c.dns-shop.ru/thumb/st4/fit/0/0/58e7f63a7ebb6fccc44cec2dd6fcb526/df012e460485b18a2b9d4cab568bd51a25a3db67fb23bb5172e6f4739b75db4e.jpg.webp") center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.carusel-v2 nav {
+    display: none;
+}
+@media screen and (max-width: 560px) {
+    .carusel-v2 {
+        flex-direction: column-reverse;
+        margin: 10px 10px;
+        align-items: center;
+        justify-self: center;
+    }
+    .carusel-v2 .images-list {
+        display: flex;
+        flex-direction: initial;
+    } 
+    .carusel-v2 .images-list-container {
+        display: flex;
+        flex-direction: initial;
+        width: 215px;
+        max-width: 215px;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    .active {
+       border-left: none;
+    }
+    .images-list-img-container {
+        width: 90px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border: solid 1px #ccc;
+        border-radius: 2px;
+        padding: 2px;
+        margin-right: 10px;
+    }
+    .images-list-img {
+        width: 57px;
+    }
+    .images-list__arrow:first-child {
+        top: 30px;
+        left: 90%;
+        transform: rotate(90deg);
+    }
+    .images-list__arrow:last-child {
+        top: 30px;
+        left: 3%;
+        transform: rotate(90deg);
+    }
+}
