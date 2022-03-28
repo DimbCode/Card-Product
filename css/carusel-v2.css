@@ -111,7 +111,7 @@ body {
     justify-content: center;    
     border-left: 3px solid white;
 }
-.active {
+.images-list-img-active {
   border-left: 3px solid #90c511;
   border-radius: 1px;
 }
