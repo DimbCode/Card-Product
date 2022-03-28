@@ -9,9 +9,9 @@ let ProductDetailPageBySkipli = function (event) {
         if (event.target.classList.contains("images-list-img")) {
             glImg.src = event.target.src;
             images.forEach((item) => {
-                item.classList.remove("active");
+                item.classList.remove(".images-list-img-active");
             });
-            event.target.parentElement.classList.add("active");
+            event.target.parentElement.classList.add(".images-list-img-active");
         }
     }
     if (event.type == "click") {
