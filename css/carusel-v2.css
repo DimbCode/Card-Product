@@ -13,7 +13,7 @@ body {
 .carusel-v2 .images-list {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 20px 0px;
     position:relative;
 }
 .images-list__arrow {
