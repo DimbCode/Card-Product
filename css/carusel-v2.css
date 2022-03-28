@@ -84,7 +84,7 @@ body {
 .carusel-v2 .images-list-container {
     display: flex;
     flex-direction: column;
-    margin: 0 12px;
+    margin: 0 30px;
     height: 350px;
     max-height: 407px;
     overflow-y: auto;
